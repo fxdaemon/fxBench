@@ -1,0 +1,172 @@
+/*
+* Copyright 2020 FXDaemon
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+package org.fxbench.chart.ta;
+
+import com.tictactec.ta.lib.Core;
+import com.tictactec.ta.lib.MAType;
+import com.tictactec.ta.lib.MInteger;
+
+import java.awt.Graphics2D;
+
+import org.fxbench.chart.ta.Indicator;
+import org.fxbench.chart.Dataset;
+import org.fxbench.chart.DefaultPainter;
+import org.fxbench.chart.Range;
+
+/**
+ *
+ * @author joshua.taylor
+ */
+public class taSTOCHASTIC extends Indicator
+{
+    private static String NAME = "STOCHASTIC";
+
+    //variables for TA-Lib utilization
+    private double[] outputFastD;
+    private double[] outputFastK;
+
+    @Override
+    public String getName() {
+    	return NAME;
+    }
+
+    @Override
+    public String getLabel() {
+    	return getName() + "(" + getPeriodK()
+			+ ", " + getPeriodD()
+			+ ", " + getPeriodSlowD()
+			+ ", " + getSlowKType()
+			+ ", " + getSlowDType() + ")"; 
+//			+ (isCalculated() ? 
+//				"  K: " + outputFastK[outputFastK.length - 1] +
+//				"  D: " + outputFastD[outputFastD.length - 1]
+//			: "");
+    }
+
+    @Override
+	public String getValueFormat() {
+		return "#.##";
+	}
+    
+    @Override
+	public Double getZoomFactor() {
+		return 0.01D;
+	}
+    
+    @Override
+	public Range getRangeY() {
+		return isCalculated() ? new Range(0 ,100) : null;
+	}
+    
+    @Override
+    public void draw(Graphics2D g) {
+    	if (!isCalculated() || indicatorPane.getRangeY() == null) {
+    		return;
+    	}
+    	
+    	//Draw a label
+    	g.setFont(getLabelFont());
+    	g.setColor(getColorK()); 
+    	g.drawString(getLabel(), labelBounds.x, labelBounds.y + labelBounds.height);
+    	
+    	//Draw a level line
+    	double x1 = indicatorPane.getOriginPoint().getX(); 
+    	double x2 = x1 + indicatorPane.getDimension().width;
+    	DefaultPainter.line(g,
+    			x1, getLevelSell(), x2, getLevelSell(),
+    			indicatorPane.getOriginPoint(), indicatorPane.getRangeY(),
+    			indicatorPane.getAxisYScale(), getColorLevel());
+    	DefaultPainter.line(g,
+    			x1, getLevelBuy(), x2, getLevelBuy(),
+    			indicatorPane.getOriginPoint(), indicatorPane.getRangeY(),
+    			indicatorPane.getAxisYScale(), getColorLevel());
+    	
+    	//Draw a curve
+   		DefaultPainter.line(
+   				g, outputFastK, indicatorPane.getOriginPoint(), indicatorPane.getRangeY(), 
+   				indicatorPane.getAxisXScale(), indicatorPane.getAxisYScale(), getColorK());
+   		DefaultPainter.line(
+   				g, outputFastD, indicatorPane.getOriginPoint(), indicatorPane.getRangeY(),
+   				indicatorPane.getAxisXScale(), indicatorPane.getAxisYScale(), getColorD());
+    }
+    
+    @Override
+    public boolean isCalculated() {
+    	if (outputFastD == null || outputFastD.length == 0 ||
+    		outputFastK == null || outputFastK.length == 0) {
+    		return false;
+    	} else {
+    		return true;
+    	}
+    }
+
+    @Override
+    public void calculate() {
+        Dataset dataset = indicatorPane.getChartPanel().getDataset();
+        if (dataset == null || dataset.getSize() == 0) {
+        	outputFastD = null;
+        	outputFastK = null;
+        	return;
+        }
+        
+        int count = dataset.getSize();
+        outputFastD = new double[count];
+        outputFastK = new double[count];
+        
+        /**********************************************************************/
+        //This entire method is basically a copy/paste action into your own
+        //code. The only thing you have to change is the next few lines of code.
+        //Choose the 'lookback' method and appropriate 'calculation function'
+        //from TA-Lib for your needs. Everything else should stay basically the
+        //same
+
+        //prepare ta-lib variables
+        MInteger outBegIdx = new MInteger();
+        MInteger outNbElement = new MInteger();
+        int periodK = getPeriodK();
+        int periodD = getPeriodD();
+        int periodSlowD = getPeriodSlowD();//actually this is the Slow%D in the indicator!
+        MAType slowkType = getMAType(getSlowKType());
+        MAType slowdType = getMAType(getSlowDType());
+        
+        double[] highVals = dataset.getHighValues();
+        double[] lowVals = dataset.getLowValues();
+        double[] closeVals = dataset.getCloseValues();
+
+        //now do the calculation over the entire dataset
+        //[First, perform the lookback call if one exists]
+        //[Second, do the calculation call from TA-lib]
+        Core core = TaLib.getCore();//needs to be here for serialization issues
+        int lookback = core.stochLookback(periodK, periodD, slowkType, periodSlowD, slowdType);
+        core.stoch(0, count-1, highVals, lowVals, closeVals, periodK, periodD, slowkType, periodSlowD, slowdType, outBegIdx, outNbElement, outputFastK, outputFastD);
+
+        //fix the output array's structure. TA-Lib does NOT match
+        //indicator index and dataset index automatically. That's what
+        //this function does for us.
+        outputFastD = TaLib.fixOutputArray(outputFastD, lookback);
+        outputFastK = TaLib.fixOutputArray(outputFastK, lookback);
+    }
+    
+    @Override
+    public void shift() {
+    	if (isCalculated()) {
+    		outputFastD = indicatorPane.getVisibleReal(outputFastD);
+    		outputFastK = indicatorPane.getVisibleReal(outputFastK);
+    	}
+    }
+}
+

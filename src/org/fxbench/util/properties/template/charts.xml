@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<chart title="charts">
+
+  <pricebar title="PRICEBAR" visible="0">
+    <property visible="0" type="string" value="Candlestick" name="type" label="" />
+    <property visible="0" type="color" value="0,255,0" name="color_raised" label="" />
+    <property visible="0" type="color" value="255,0,0" name="color_down" label="" />
+  </pricebar>
+
+  <overlay title="BBAND" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color_band" label="Band lines Color" />
+    <property visible="1" type="color" value="255,0,0" name="color_ave" label="Average line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth_band" label="Band lines Width" />
+    <property visible="1" type="double" value="1.0" name="linewidth_ave" label="Average line Width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+    <property visible="1" type="double" value="1.5" name="nbdev" label="Number of standard deviations" />
+    <property visible="1" type="string[]" value="EMA" data="SMA,EMA,WMA" name="type_dev" label="Smoothing type" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </overlay>
+  
+  <overlay title="EMA" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="7" name="period" label="Number of periods" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </overlay>
+  
+  <overlay title="SAR" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="double" value="0.02" name="step" label="The sensitivity of SAR" />
+    <property visible="1" type="double" value="0.2" name="max" label="The maximum value of Step" />
+  </overlay>
+  
+  <overlay title="SMA" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="7" name="period" label="Number of periods" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </overlay>
+  
+  <indicator title="ADX" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+  </indicator>
+  
+  <indicator title="APO" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="12" name="period_fast" label="Number of periods on fast" />
+    <property visible="1" type="int" value="26" name="period_slow" label="Number of periods on slow" />
+    <property visible="1" type="string[]" value="EMA" data="SMA,EMA,WMA" name="type_slow" label="Smoothing type" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+  
+  <indicator title="ATR" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+  </indicator>
+
+  <indicator title="CMO" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+
+  <indicator title="MACD" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="Divider location" />
+    <property visible="1" type="color" value="0,0,255" name="color_macd" label="Macd Color" />
+    <property visible="1" type="color" value="255,0,0" name="color_signal" label="Signal Color" />
+    <property visible="1" type="color" value="0,255,0" name="color_hist" label="Histogram Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth_macd" label="Macd width" />
+    <property visible="1" type="double" value="1.0" name="linewidth_signal" label="Signal width" />
+    <property visible="1" type="int" value="7" name="period_fast" label="Fast period" />
+    <property visible="1" type="int" value="3" name="period_slow" label="Slow period" />
+    <property visible="1" type="int" value="3" name="period_signal" label="Signal period" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+  
+  <indicator title="MOM" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+  
+  <indicator title="PPO" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="12" name="period_fast" label="Number of periods on fast" />
+    <property visible="1" type="int" value="26" name="period_slow" label="Number of periods on slow" />
+    <property visible="1" type="string[]" value="EMA" data="SMA,EMA,WMA" name="type_slow" label="Smoothing type" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+  
+  <indicator title="ROC" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+
+  <indicator title="RSI" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="7" name="period" label="Number of periods" />
+    <property visible="1" type="double" value="70" name="level_sell" label="Overbought level" />
+    <property visible="1" type="double" value="30" name="level_buy" label="Oversold level" />
+    <property visible="1" type="color" value="200,200,200" name="color_level" label="Level lines Color" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+  
+  <indicator title="STDDEV" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color" label="Line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth" label="Line width" />
+    <property visible="1" type="int" value="14" name="period" label="Number of periods" />
+    <property visible="1" type="double" value="1.5" name="nbdev" label="Number of standard deviations" />
+    <property visible="1" type="string[]" value="Close" data="Open,High,Low,Close,Typical,Median,Weighted" name="pirce_type" label="Data source" />
+  </indicator>
+  
+  <indicator title="STOCHASTIC" visible="1">
+    <property visible="1" type="font" value="Dialog,0,12" name="font_lable" label="Lable font" />
+    <property visible="0" type="int" value="0" name="divider_location" label="" />
+    <property visible="1" type="color" value="0,0,255" name="color_k" label="%K line Color" />
+    <property visible="1" type="color" value="255,0,0" name="color_d" label="%D line Color" />
+    <property visible="1" type="double" value="1.0" name="linewidth_k" label="%K line width" />
+    <property visible="1" type="double" value="1.0" name="linewidth_d" label="%D line width" />
+    <property visible="1" type="int" value="7" name="period_k" label="Number of periods for %K" />
+    <property visible="1" type="int" value="3" name="period_d" label="%D slowing periods" />
+    <property visible="1" type="int" value="3" name="period_slow_d" label="Number of periods for %D" />
+    <property visible="1" type="string[]" value="SMA" data="SMA,EMA,WMA" name="type_slow_k" label="Smoothing type for %K" />
+    <property visible="1" type="string[]" value="SMA" data="SMA,EMA,WMA" name="type_slow_d" label="Smoothing type for %D" />
+    <property visible="1" type="double" value="70" name="level_sell" label="Overbought level" />
+    <property visible="1" type="double" value="30" name="level_buy" label="Oversold level" />
+    <property visible="1" type="color" value="200,200,200" name="color_level" label="Level lines Color" />
+  </indicator>
+
+</chart>

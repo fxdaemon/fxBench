@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<settings>
+
+  <shortcuts title="Shortcuts">
+    <property type="string" value="alt F4" name="Exit" label="" />
+    <property type="string" value="F1" name="Help" label="" />
+    <property type="string" value="F2" name="Report" label="" />
+    <property type="string" value="F3" name="MarketOrder" label="" />
+    <property type="string" value="F4" name="EntryOrder" label="" />
+    <property type="string" value="F5" name="UpdateEntryOrder" label="" />
+    <property type="string" value="F6" name="RemoveEntryOrder" label="" />
+    <property type="string" value="F7" name="StopLimit" label="" />
+    <property type="string" value="F8" name="ClosePosition" label="" />
+    <property type="string" value="F9" name="Login" label="" />
+    <property type="string" value="F10" name="RFQ" label="" />
+    <property type="string" value="F11" name="Options" label="" />
+    <property type="string" value="F12" name="About" label="" />
+    <property type="string" value="shift F1" name="AccountsWindow" label="" />
+    <property type="string" value="shift F2" name="RatesWindow" label="" />
+    <property type="string" value="shift F3" name="OpenPositionsWindow" label="" />
+    <property type="string" value="shift F4" name="OrdersWindow" label="" />
+    <property type="string" value="shift F5" name="SummaryWindow" label="" />
+    <property type="string" value="shift F6" name="ClosedPositionsWindow" label="" />
+    <property type="string" value="shift F7" name="TileOrdering" label="" />
+    <property type="string" value="shift F8" name="CascadeOrdering" label="" />
+    <property type="string" value="shift F9" name="Logout" label="" />
+    <property type="string" value="shift F10" name="AutoArrange" label="" />
+  </shortcuts>
+
+  <report title="Report">
+    <property type="string" value="%serverURL%?S=%SESSIONID%&amp;cn=%CONNECTIONNAME%&amp;lc=enu&amp;outFormat=HTML&amp;account=%accId%&amp;from=%fromDate%&amp;till=%toDate%" name="format" label="" />
+  </report>
+
+  <market>
+    <property type="int" value="1" name="open_wday" label="" />
+    <property type="int" value="6" name="open_hour" label="" />
+    <property type="int" value="6" name="close_wday" label="" />
+    <property type="int" value="6" name="close_hour" label="" />
+  </market>
+  
+</settings>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<preferences title="User Preference">
+
+  <local title="" visible="0">
+    <property type="string" value="en" name="language" label="" />
+    <property type="string" value="US" name="country" label="" />
+  </local>
+
+  <frame title="" visible="0">
+    <property type="int" value="800" name="width" label="" />
+    <property type="int" value="600" name="height" label="" />
+    <property type="boolean" value="true" name="toolbar" label="" />
+    <property type="boolean" value="true" name="statusbar" label="" />
+  </frame>
+
+  <tradingmode title="Trading Mode" visible="0">
+    <property type="boolean" value="true" name="default_click" label="Default(Click and Confirm)" />
+    <property type="boolean" value="false" name="single_click" label="Single-Click" />
+    <property type="boolean" value="false" name="double_click" label="Double-Click" />
+    <property type="boolean" value="true" name="atbest" label="At Best" />
+    <property type="int" value="0" name="market_rang" label="Market Rang" />
+  </tradingmode>
+
+  <windows title="Window" visible="1">
+    <property visible="1" type="boolean" value="true" name="snap_mouse" label="Snap Mouse" />
+    <property visible="1" type="boolean" value="true" name="anti-aliasing" label="Anti-aliasing" />
+  </windows>
+
+  <menu>
+    <property type="string" value="" name="lookandfeel" label="" />
+  </menu>
+
+  <panels>
+
+    <table title="Table Default" visible="0">
+      <property type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property type="color" value="0,0,0" name="foreground_default" label="" />
+      <property type="color" value="0,0,0" name="foreground_header" label="" />
+      <property type="color" value="0,0,0" name="foreground_selected" label="" />
+      <property type="color" value="255,255,255" name="background_default_even" label="" />
+      <property type="color" value="227,244,255" name="background_default_odd" label="" />
+      <property type="color" value="196,213,243" name="background_header" label="" />
+      <property type="color" value="196,185,244" name="background_selected" label="" />
+    </table>
+
+    <symbol title="Symbol" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_down" label="Down" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_raised" label="Raised" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_down_selected" label="Down Selected" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_raised_selected" label="Raised Selected" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="255,255,255" name="foreground_down" label="Foreground when rate decreases" />
+      <property visible="1" type="color" value="255,255,255" name="foreground_raised" label="Foreground when rate increases" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="255,255,255" name="foreground_down_selected" label="Foreground of selected item when rate decreases" />
+      <property visible="1" type="color" value="255,255,255" name="foreground_raised_selected" label="Foreground of selected item when rate increases" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="204,2,2" name="background_down" label="Background when rate decreases" />
+      <property visible="1" type="color" value="32,87,223" name="background_raised" label="Background when rate increases" />
+      <property visible="1" type="color" value="204,204,255" name="background_selected" label="Background of selected line" />
+      <property visible="1" type="color" value="204,2,2" name="background_down_selected" label="Background of selected item when rate decreases" />
+      <property visible="1" type="color" value="32,82,223" name="background_raised_selected" label="Background of selected item when rate increases" />
+    </symbol>
+
+    <account title="Account" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_undermargincall" label="Under Margin Call" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,51,51" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_undermargincall" label="Foreground of Under Margin Call" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="204,204,255" name="background_selected" label="Background of selected line" />
+      <property visible="1" type="color" value="255,153,153" name="background_undermargincall" label="Background of Under Margin Call" />
+    </account>
+    
+    <openposition title="OpenPosition" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_closed" label="Closed" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_undermargincall" label="Under Margin Call" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_undermargincall" label="Foreground of Under Margin Call" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_closed" label="Foreground of closed position" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="204,204,244" name="background_selected" label="Background of selected line" />
+      <property visible="1" type="color" value="255,153,153" name="background_undermargincall" label="Background of Under Margin Call" />
+      <property visible="1" type="color" value="255,204,153" name="background_closed" label="Background of closed position" />
+    </openposition>
+
+    <closedposition title="ClosedPosition" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_closed" label="Closed" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_undermargincall" label="Under Margin Call" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_undermargincall" label="Foreground of Under Margin Call" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_closed" label="Foreground of closed position" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="204,204,244" name="background_selected" label="Background of selected line" />
+      <property visible="1" type="color" value="255,153,153" name="background_undermargincall" label="Background of Under Margin Call" />
+      <property visible="1" type="color" value="255,204,153" name="background_closed" label="Background of closed position" />
+    </closedposition>
+
+    <order title="Order" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_undermargincall" label="Under Margin Call" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_undermargincall" label="Foreground of Under Margin Call" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="204,204,255" name="background_selected" label="Background of selected line" />
+      <property visible="1" type="color" value="255,153,153" name="background_undermargincall" label="Background of Under Margin Call" />
+    </order>
+
+    <summary title="Summary" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_total" label="Total" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_total" label="Foreground of total line" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="196,185,244" name="background_selected" label="Background of selected line" />
+      <property visible="1" type="color" value="234,234,234" name="background_total" label="Background of total line" />
+    </summary>
+
+    <message title="Message" visible="1">
+      <property visible="0" type="boolean" value="true" name="visible" label="" />
+      <property visible="0" type="string" value="" name="col_widthes" label="" />
+      <property visible="0" type="int" value="0" name="order" label="" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_header" label="Header" />
+      <property visible="1" type="font" value="Dialog,0,12" name="font_content" label="Content" />
+      <property visible="1" type="font" value="Dialog,1,12" name="font_selected" label="Selected" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_default" label="Foreground" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_header" label="Foreground of header" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_selected" label="Foreground of selected line" />
+      <property visible="1" type="color" value="255,255,255" name="background_default_even" label="Background of even rows" />
+      <property visible="1" type="color" value="227,244,255" name="background_default_odd" label="Background of odd rows" />
+      <property visible="1" type="color" value="196,213,243" name="background_header" label="Background of header" />
+      <property visible="1" type="color" value="196,185,244" name="background_selected" label="Background of selected line" />
+    </message>
+
+    <chart title="Chart" visible="1">
+      <property visible="0" type="font" value="Dialog,0,12" name="font_mark" label="Font of mark" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_rate_mark" label="Foreground of rate mark" />
+      <property visible="1" type="color" value="100,100,255" name="background_rate_mark" label="Background of rate mark" />
+      <property visible="1" type="color" value="0,0,0" name="foreground_cross_mark" label="Foreground of cross mark" />
+      <property visible="1" type="color" value="255,255,100" name="background_cross_mark" label="Background of cross mark" />
+      <property visible="1" type="color" value="200,200,200" name="color_grid" label="Color of grid" />
+      <property visible="1" type="color" value="220,220,220" name="color_cross" label="Color of cross" />
+      <property visible="1" type="color" value="10,10,10" name="background" label="" />
+      <property visible="0" type="color" value="0,255,0" name="color_raised" label="" />
+      <property visible="0" type="color" value="255,0,0" name="color_down" label="" />
+      <property visible="0" type="string[]" value="Tabbed" data="Tabbed,Split" name="overlap" label="" />
+    </chart>
+
+  </panels>
+
+  <dialogs>
+
+    <help title="Help Dialog" visible="0">
+      <property type="int" value="0" name="x" label="" />
+      <property type="int" value="0" name="y" label="" />
+      <property type="int" value="200" name="width" label="" />
+      <property type="int" value="150" name="height" label="" />
+      <property type="int" value="80" name="split" label="" />
+    </help>
+
+  </dialogs>
+
+</preferences>

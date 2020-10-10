@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<hosts xpath="out">
+
+  <host title="fxcm">
+    <server title="Trade Server" visible="1">
+      <property visible="1" type="string" value="" name="config.file" label="Config File" />
+      <property visible="0" type="string" value="fxcorporate.com/Hosts.jsp" name="url" label="URL" />
+      <property visible="0" type="int" value="180000" name="timeout" label="TCP Timeout" />
+      <connection>
+        <demo title="Demo" visible="1">
+          <property visible="0" type="boolean" value="true" name="selected" label="" />
+          <property visible="0" type="string" value="Demo" name="terminal" label="" />
+          <property visible="1" type="string" value="" name="username" label="" />
+          <property visible="1" type="string" value="" name="password" label="" />
+          <property visible="1" type="string" value="http://fxcorporate.com/Hosts.jsp" name="url" label="" />
+          <property visible="1" type="boolean" value="true" name="secure_connection" label="Secure Connection" />
+        </demo>
+        <real title="Real" visible="1">
+          <property visible="0" type="boolean" value="false" name="selected" label="" />
+          <property visible="0" type="string" value="Real" name="terminal" label="" />
+          <property visible="1" type="string" value="" name="username" label="" />
+          <property visible="1" type="string" value="" name="password" label="" />
+          <property visible="1" type="string" value="http://fxcorporate.com/Hosts.jsp" name="url" label="" />
+          <property visible="1" type="boolean" value="true" name="secure_connection" label="Secure Connection" />
+        </real>
+      </connection>
+    </server>
+    <proxy title="Proxy Server" visible="1">
+      <property visible="1" type="boolean" value="false" name="use" label="Use proxy" />
+      <property visible="1" type="string" value="" name="host" label="Host" />
+      <property visible="1" type="int" value="0" name="port" label="Port" />
+      <property visible="1" type="string" value="" name="user" label="Proxy user Name" />
+      <property visible="1" type="string" value="" name="password" label="Proxy user Password" />
+    </proxy>
+  </host>
+
+  <host title="local">
+    <server title="Local Server" visible="1">
+      <connection>
+        <local title="Local" visible="1">
+          <property visible="0" type="boolean" value="true" name="selected" label="" />
+          <property visible="0" type="string" value="Local" name="terminal" label="" />
+          <property visible="1" type="string" value="" name="username" label="Account Name" />
+          <property visible="1" type="string" value="" name="datapath" label="Data Path" />
+          <property visible="1" type="date" value="" name="startdate" label="Start Date" />
+          <property visible="1" type="string" value="localhost" name="dbhost" label="DB Host" />
+          <property visible="1" type="string" value="scm_fxtrade" name="dbname" label="DB Name" />
+          <property visible="1" type="string" value="fxtrade" name="dbuser" label="DB User" />
+          <property visible="1" type="string" value="fxtrade" name="dbpassword" label="DB Password" />
+        </local>
+      </connection>
+    </server>
+  </host>
+
+</hosts>
