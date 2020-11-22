@@ -558,14 +558,14 @@ public class TPosition extends BaseEntity
 		StringBuffer sb = new StringBuffer();
 //		sb.append("SELECT * FROM `Trade`");
 //		sb.append(" WHERE");
-//		sb.append(" `AccountId`=").append("'").append(accountId).append("'");
+//		sb.append(" `AccountID`=").append("'").append(accountId).append("'");
 		sb.append("SELECT t.*");
 		sb.append(",ts.TradeMethodPeriod,ts.TradeMethodName,ts.TrailStopPeriod,ts.TrailStopName,ts.TrailMoveTsName");
 		sb.append(" FROM `Trade` t, `TsContext` ts");
 		sb.append(" WHERE");
-		sb.append(" t.AccountId=ts.AccountId");
+		sb.append(" t.AccountID=ts.AccountID");
 		sb.append(" AND t.TradeID=ts.TradeID");
-		sb.append(" AND t.AccountId=").append("'").append(accountId).append("'");
+		sb.append(" AND t.AccountID=").append("'").append(accountId).append("'");
 		if (tradeID != null && tradeID.length() > 0) {
 			sb.append(" AND t.TradeID=").append("'").append(tradeID).append("'");
 		}
@@ -577,7 +577,7 @@ public class TPosition extends BaseEntity
 	public BaseEntity newEntity(ResultSet resultSet) throws SQLException {
 		TPosition position = new TPosition();
 		position.tradeID = resultSet.getString("TradeID");	
-		position.accountId = resultSet.getString("AccountId");	
+		position.accountId = resultSet.getString("AccountID");	
 //		position.accountName = resultSet.getString("AccountName");	
 		position.offerID = resultSet.getString("OfferID");	
 		position.symbol = resultSet.getString("Symbol");	
@@ -587,23 +587,23 @@ public class TPosition extends BaseEntity
 		position.open = resultSet.getDouble("Open");	
 		position.close = resultSet.getDouble("Close");	
 		position.stop = resultSet.getDouble("Stop");	
-		position.untTrlMove = resultSet.getDouble("UntTrlMove");	
+//		position.untTrlMove = resultSet.getDouble("UntTrlMove");	
 		position.limit = resultSet.getDouble("Limit");	
 		position.high = resultSet.getDouble("High");	
 		position.low = resultSet.getDouble("Low");	
 		position.pl = resultSet.getDouble("PL");	
 		position.grossPL = resultSet.getDouble("GrossPL");	
 //		position.netPL = resultSet.getDouble("");	
-		position.com = resultSet.getDouble("Com");	
-		position.interest = resultSet.getDouble("Int");	
+		position.com = resultSet.getDouble("Commission");	
+		position.interest = resultSet.getDouble("Interest");	
 		position.openTime = resultSet.getTimestamp("OpenTime");	
 		position.closeTime = resultSet.getTimestamp("CloseTime");	
-		position.kind = resultSet.getString("Kind");	
-		position.quoteID = resultSet.getString("QuoteID");	
+//		position.kind = resultSet.getString("Kind");	
+//		position.quoteID = resultSet.getString("QuoteID");	
 		position.openOrderID = resultSet.getString("OpenOrderID");	
-		position.openOrderReqID = resultSet.getString("OpenOrderReqID");	
+//		position.openOrderReqID = resultSet.getString("OpenOrderReqID");	
 		position.closeOrderID = resultSet.getString("CloseOrderID");	
-		position.closeOrderReqID = resultSet.getString("CloseOrderReqID");	
+//		position.closeOrderReqID = resultSet.getString("CloseOrderReqID");	
 //		position.oQTXT = resultSet.getString("OQTXT");
 //		position.cQTXT = resultSet.getString("CQTXT");
 		position.stopOrderID = resultSet.getString("StopOrderID");

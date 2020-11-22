@@ -333,29 +333,29 @@ public class TAccount extends BaseEntity {
 		StringBuffer sb = new StringBuffer();
 		sb.append("SELECT * FROM `Account`");
 		sb.append(" WHERE");
-		sb.append(" `AccountId`=").append("'").append(accountId).append("'");
+		sb.append(" `AccountID`=").append("'").append(accountId).append("'");
 		return sb.toString();
 	}
 	
 	@Override
 	public BaseEntity newEntity(ResultSet resultSet) throws SQLException {
 		TAccount account = new TAccount();
-		account.accountId = resultSet.getString("AccountId");
+		account.accountId = resultSet.getString("AccountID");
 		account.accountName = resultSet.getString("AccountName");
 		account.balance = resultSet.getDouble("Balance");
 		account.equity = resultSet.getDouble("Equity");
 		account.dayPL = resultSet.getDouble("DayPL");
-		account.nontrdEqty = resultSet.getDouble("NontrdEqty");
-		account.m2MEquity = resultSet.getDouble("M2MEquity");
+//		account.nontrdEqty = resultSet.getDouble("NontrdEqty");
+//		account.m2MEquity = resultSet.getDouble("M2MEquity");
 		account.usedMargin = resultSet.getDouble("UsedMargin");
 		account.usableMargin = resultSet.getDouble("UsableMargin");
 		account.grossPL = resultSet.getDouble("GrossPL");
-		account.kind = resultSet.getString("Kind");
-		account.marginCall = resultSet.getString("MarginCall");
+		account.kind = resultSet.getString("AccountType");
+//		account.marginCall = resultSet.getString("MarginCall");
 //		account.isUnderMarginCall = resultSet.getBoolean("IsUnderMarginCall");
 		account.hedging = resultSet.getString("Hedging");
-		account.amountLimit = resultSet.getInt("AmountLimit");
-		account.baseUnitSize = resultSet.getDouble("BaseUnitSize");
+//		account.amountLimit = resultSet.getInt("AmountLimit");
+//		account.baseUnitSize = resultSet.getDouble("BaseUnitSize");
 //		account.marginReq = resultSet.getDouble("");
 		return account;
 	}

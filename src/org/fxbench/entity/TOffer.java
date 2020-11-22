@@ -467,13 +467,13 @@ public class TOffer extends BaseEntity {
 		offer.symbolType = resultSet.getInt("SymbolType");
 		offer.bid = resultSet.getDouble("Bid");
 		offer.ask = resultSet.getDouble("Ask");
-		offer.high = resultSet.getDouble("Hi");
+		offer.high = resultSet.getDouble("High");
 		offer.low = resultSet.getDouble("Low");
-		offer.intrS = resultSet.getDouble("IntrS");
-		offer.intrB = resultSet.getDouble("IntrB");
-		offer.contractCurrency = resultSet.getString("ContractCurrency");
+//		offer.intrS = resultSet.getDouble("IntrS");
+//		offer.intrB = resultSet.getDouble("IntrB");
+//		offer.contractCurrency = resultSet.getString("ContractCurrency");
 //		offer.contractSize = resultSet.getInt("ContractSize");
-		offer.digits = resultSet.getInt("Digits");
+//		offer.digits = resultSet.getInt("Digits");
 //		offer.defaultSortOrder = resultSet.getInt("DefaultSortOrder");
 		offer.pipCost = resultSet.getDouble("PipCost");
 //		offer.mmr = resultSet.getDouble("MMR");
@@ -487,8 +487,8 @@ public class TOffer extends BaseEntity {
 //		offer.askID = resultSet.getString("AskID");
 //		offer.bidExpireDate = resultSet.getTimestamp("BidExpireDate");
 //		offer.askExpireDate = resultSet.getTimestamp("AskExpireDate");
-		offer.bidTradable = resultSet.getBoolean("BidTradable");
-		offer.askTradable = resultSet.getBoolean("AskTradable");
+//		offer.bidTradable = resultSet.getBoolean("BidTradable");
+//		offer.askTradable = resultSet.getBoolean("AskTradable");
 		offer.pointSize = resultSet.getDouble("PointSize");
 		return offer;
 	}
